@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -8,9 +9,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main1.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main1.HelloController">
    <children>
-      <GridPane layoutY="79.0" prefHeight="243.0" prefWidth="416.0">
+      <GridPane layoutY="79.0" prefHeight="278.0" prefWidth="416.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,6 +22,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -88,26 +90,32 @@
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="equals" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="114.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Button>
             <Button fx:id="clear" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="109.0" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="div" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="116.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="div" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="104.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="equals" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="66.0" prefWidth="108.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="tochka" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="113.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
          </children>
       </GridPane>
-      <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="54.0" prefWidth="387.0">
+      <TextField fx:id="display" alignment="BOTTOM_RIGHT" layoutX="14.0" layoutY="14.0" onAction="#KeyInput" prefHeight="54.0" prefWidth="387.0" promptText="0">
          <font>
             <Font size="20.0" />
          </font></TextField>
+      <Label fx:id="label" alignment="CENTER_RIGHT" layoutX="13.0" layoutY="14.0" prefHeight="22.0" prefWidth="387.0" />
    </children>
 </AnchorPane>

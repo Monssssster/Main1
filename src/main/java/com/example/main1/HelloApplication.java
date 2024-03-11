@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 430, 340);
+        Scene scene = new Scene(fxmlLoader.load(), 430, 390);
         stage.setTitle("Калькулятор");
         stage.setScene(scene);
         stage.show();
@@ -21,3 +21,7 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+//9+9-9 = 0 ошибка + чтобы история писалась правильно - добавить массив для того чтобы
+//ввод с клавиатуры, что бы по нажатию кнопки + он отображался в label
+//сделать скобки в калькуляторе. То что сначала необходимо выполнить то что в скобках, а потом уже все остальное
+//Приоретизация операций
